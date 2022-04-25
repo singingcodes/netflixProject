@@ -42,19 +42,23 @@ class LordRings extends Component {
   render() {
     return (
       <div>
-        <h5>Lord Of The Rings</h5>
-        {this.state.isError && (
-          <Alert variant="danger">Error please try again</Alert>
-        )}
-        {this.state.isLoading && <Spinner animation="border" variant="info" />}
-        <Col md={3} className="mb-2">
-          <FormControl
-            type="text"
-            placeholder="Search Lord of the rings..."
-            value={this.state.searchQuery}
-            onChange={(e) => this.setState({ searchQuery: e.target.value })}
-          />
-        </Col>
+        <Row className="justify-content-between">
+          <h5 className="m-3">Lord Of The Rings</h5>
+          {this.state.isError && (
+            <Alert variant="danger">Error please try again</Alert>
+          )}
+          {this.state.isLoading && (
+            <Spinner animation="border" variant="info" />
+          )}
+          <Col md={3} className="mb-3">
+            <FormControl
+              type="text"
+              placeholder="Search Lord of the rings..."
+              value={this.state.searchQuery}
+              onChange={(e) => this.setState({ searchQuery: e.target.value })}
+            />
+          </Col>
+        </Row>
         <Carousel className="carousel slide mb-4 d-none d-md-block">
           <Carousel.Item>
             <Row className="mx-n1">
@@ -67,7 +71,7 @@ class LordRings extends Component {
                     <img
                       className="d-block w-100"
                       src={movie.Poster}
-                      alt="Third slide"
+                      alt="slide"
                     />
                   </Col>
                 ))}
