@@ -1,9 +1,11 @@
 import React, { Component } from "react"
-import { Carousel, Row, Col } from "react-bootstrap"
+import { Carousel, Row, Col, Alert, Spinner } from "react-bootstrap"
 
 class StarWars extends Component {
   state = {
     movies: [],
+    isError: false,
+    isLoading: true,
   }
   componentDidMount = async () => {
     try {
@@ -16,11 +18,17 @@ class StarWars extends Component {
         console.log(dataArray)
         this.setState({
           movies: dataArray,
+          isLoading: false,
         })
       } else {
-        console.log("an error ocurred")
+        this.setState({
+          isError: true,
+        })
       }
     } catch (error) {
+      this.setState({
+        isError: true,
+      })
       console.log(error)
     }
   }
@@ -29,6 +37,10 @@ class StarWars extends Component {
     return (
       <div>
         <h5>Star Wars</h5>
+        {this.state.isError && (
+          <Alert variant="danger">Error please try again</Alert>
+        )}
+        {this.state.isLoading && <Spinner animation="border" variant="info" />}
         <Carousel className="carousel slide mb-4 d-none d-md-block">
           <Carousel.Item>
             <Row className="mx-n1">

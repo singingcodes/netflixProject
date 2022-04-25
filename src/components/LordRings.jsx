@@ -35,6 +35,9 @@ class LordRings extends Component {
         console.log("an error ocurred")
       }
     } catch (error) {
+      this.setState({
+        isError: true,
+      })
       console.log(error)
     }
   }

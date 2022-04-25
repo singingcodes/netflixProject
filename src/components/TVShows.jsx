@@ -11,7 +11,7 @@ class TVShows extends Component {
             <DropdownButton
               id="dropdown-basic-button"
               title="Genres"
-              className="button-tv mt-1 rounded-0 d-inline-block"
+              className="button-tv mt-1 d-inline-block"
             >
               <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
               <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>

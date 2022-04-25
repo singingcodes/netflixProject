@@ -24,8 +24,9 @@
   font-size: 0.85rem;
 }
 #dropdown-basic-button{
-  border: 1px solid #fff !important;
+  border: 0.1px solid #ADC4C4 !important;
   background: transparent !important;
+  outline: none !important;
 }
 #responsive-navbar-nav > div.dropdown > button{
   background-color: transparent !important;
