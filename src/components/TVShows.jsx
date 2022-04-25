@@ -17,7 +17,7 @@ class TVShows extends Component {
               <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
               <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
             </DropdownButton>
-            <div className="header-icons d-inline-block align-middle text-white m-4">
+            <div className="header-icons d-inline-block align-middle text-white mr-4">
               <span className="border border-secondary d-inline-block py-1 px-2">
                 <i className="bi bi-justify-left"></i>
               </span>
